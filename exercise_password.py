@@ -1,3 +1,6 @@
+from operator import truediv
+
+
 def password():
     """
     Ejercicio 10 - Validador de Contraseña
@@ -23,4 +26,14 @@ def password():
         Contraseña muy corta
         Debe contener un numero
     """
-    pass
+    contra = input()
+
+    if len(contra) >= 8 and ('1' in contra or '2' in contra or '3' in contra or '4' in contra or '5' in contra or '6' in contra or '7' in contra or '8' in contra or '9' in contra or '0' in contra):
+        print("Contraseña valida")
+    elif len(contra) < 8 and ('1' in contra or '2' in contra or '3' in contra or '4' in contra or '5' in contra or '6' in contra or '7' in contra or '8' in contra or '9' in contra or '0' in contra):
+        print("Contraseña muy corta")
+    elif len(contra) >= 8 and not ('1' in contra or '2' in contra or '3' in contra or '4' in contra or '5' in contra or '6' in contra or '7' in contra or '8' in contra or '9' in contra or '0' in contra):
+        print("Debe contener un numero")
+    else:
+        print("Contraseña muy corta")
+        print("Debe contener un numero")
